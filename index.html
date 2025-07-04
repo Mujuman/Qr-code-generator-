@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	
+  <!-- 🔍 SEO Meta Tags -->
+  <meta name="description" content="Free and fast QR Code Generator. Create custom QR codes for URLs and text with Ethio Coders' simple tool." />
+  <meta name="keywords" content="QR Code Generator, Free QR Code, Ethio Coders, URL to QR, QR tool, text QR generator" />
+  <meta name="author" content="Ethio Coders" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- 🌐 Open Graph (for Facebook, WhatsApp, etc.) -->
+  <meta property="og:title" content="QR Code Generator by Ethio Coders" />
+  <meta property="og:description" content="Easily generate custom QR codes for your URLs or text input. Fast, simple, free." />
+  <meta property="og:image" content="https://yourwebsite.com/preview.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QR Code Generator - Ethio Coders" />
+  <meta name="twitter:description" content="Generate QR Codes instantly from URLs or text. 100% free and easy to use." />
+  <meta name="twitter:image" content="https://yourwebsite.com/preview.jpg" />
+  
+	<title>Qr Generator</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+	<div class="container">
+		<p>Enter your URL</p>
+		<input type="text" id="inp" placeholder="Enter url or text ....." class="error"/>
+		<span id="error"></span>
+		
+		<div class="imagebox">
+      <img src="" alt="" id="img">
+		</div>
+	<button class="btn" id="btn">Generate</button>
+	
+	
+		<div class="footer">
+		<p>Made with <a href="">Ethio coders</a></p>
+	</div>
+	</div>
+	
+
+	
+	<script>
+const	inputBox=document.getElementById('inp')
+
+const image=document.getElementById('img')
+const button=document.getElementById('btn')
+const imageBox=document.querySelector('.imagebox')
+const errorMsg=document.getElementById('error')
+button.addEventListener('click',()=>{
+	if(inputBox.value.length>0){
+		image.src="https://quickchart.io/qr?text="+inputBox.value;
+		imageBox.classList.add('showImage')
+	}else{
+		errorMsg.innerHTML='Please enter URL or Text'
+		setTimeout(()=>{
+errorMsg.innerHTML=''
+		},20000)
+	}
+	
+
+	
+
+})
+	</script>
+</body>
+</html>
