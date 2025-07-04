@@ -1,7 +1,7 @@
 *{
   margin: 0px;
   padding: 0px;
-  font-family: "poppins";
+  font-family: "poppins",sans-serif;
 }
 body{
 background: rgba(6, 76, 116, 0.6);
